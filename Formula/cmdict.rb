@@ -72,7 +72,6 @@ class Cmdict < Formula
   end
 
   test do
-    system "#{bin}/cmdict", "download"
-    system "#{bin}/cmdict", "search", "apple"
+    system "#{bin}/cmdict", "--help"
   end
 end
