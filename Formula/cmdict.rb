@@ -7,6 +7,12 @@ class Cmdict < Formula
   sha256 "b4376fab9a17ac8b909db941b6969b81ebcdb7870737f48fe0eb38dcd923213a"
   license "MIT"
 
+  bottle do
+    root_url "https://github.com/edxu96/homebrew-cmdict/releases/download/cmdict-0.1.2"
+    rebuild 1
+    sha256 cellar: :any_skip_relocation, big_sur: "750710088e68716a79dcbe4cf3ec13619bb377d291db19577ab7e571dca1666d"
+  end
+
   depends_on "freetype"
   depends_on "mupdf"
   depends_on "python@3.8"
