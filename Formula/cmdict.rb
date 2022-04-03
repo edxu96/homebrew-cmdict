@@ -9,7 +9,7 @@ class Cmdict < Formula
 
   depends_on "freetype"
   depends_on "mupdf"
-  depends_on "python@3.7"
+  depends_on "python@3.8"
   depends_on "swig"
 
   resource "certifi" do
@@ -72,7 +72,6 @@ class Cmdict < Formula
   end
 
   test do
-    system "#{bin}/cmdict", "download"
-    system "#{bin}/cmdict", "search", "apple"
+    system "#{bin}/cmdict", "--help"
   end
 end
