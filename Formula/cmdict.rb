@@ -1,16 +1,16 @@
 class Cmdict < Formula
   include Language::Python::Virtualenv
 
-  desc "A command line dictionary toolset"
+  desc "command line dictionary toolset"
   homepage "https://github.com/zequnyu/cmdict"
   url "https://files.pythonhosted.org/packages/6b/bd/7cc4e0f1087bc6e6fa16fe827df66c277237bfba976da918685b813ab9ed/cmdict-0.1.2.tar.gz"
   sha256 "b4376fab9a17ac8b909db941b6969b81ebcdb7870737f48fe0eb38dcd923213a"
   license "MIT"
 
-  depends_on "python@3.7"
-  depends_on "mupdf"
-  depends_on "swig"
   depends_on "freetype"
+  depends_on "mupdf"
+  depends_on "python@3.7"
+  depends_on "swig"
 
   resource "certifi" do
     url "https://files.pythonhosted.org/packages/6c/ae/d26450834f0acc9e3d1f74508da6df1551ceab6c2ce0766a593362d6d57f/certifi-2021.10.8.tar.gz"
