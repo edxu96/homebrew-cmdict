@@ -2,13 +2,13 @@ class Cmdict < Formula
   include Language::Python::Virtualenv
 
   desc "Command-line dictionary toolset"
-  homepage "https://github.com/zequnyu/cmdict"
+  homepage "https://github.com/pasty-dev/cmdict"
   url "https://files.pythonhosted.org/packages/6b/bd/7cc4e0f1087bc6e6fa16fe827df66c277237bfba976da918685b813ab9ed/cmdict-0.1.2.tar.gz"
   sha256 "b4376fab9a17ac8b909db941b6969b81ebcdb7870737f48fe0eb38dcd923213a"
   license "MIT"
 
   bottle do
-    root_url "https://github.com/edxu96/homebrew-cmdict/releases/download/cmdict-0.1.2"
+    root_url "https://github.com/pasty-dev/homebrew-cmdict/releases/download/cmdict-0.1.2"
     rebuild 1
     sha256 cellar: :any_skip_relocation, big_sur: "750710088e68716a79dcbe4cf3ec13619bb377d291db19577ab7e571dca1666d"
   end
