@@ -17,4 +17,4 @@ jobs:
         pip install cmdict==0.1.4 homebrew-pypi-poet
     - name: Run homebrew-pypi-poet
       run: |
-        pythom -m poet cmdict
+        python -m poet cmdict
