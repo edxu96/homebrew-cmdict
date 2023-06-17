@@ -7,6 +7,8 @@ class Cmdict < Formula
   sha256 "2fec9cc2381158cc93cd7b15992658574334c36ced2f9bb3a0bc3805026f8497"
   license "MIT"
 
+  depends_on "cmake"
+
   # To enable the features for PDF, because it is optional by default.
   depends_on "pymupdf"
 
