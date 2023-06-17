@@ -5,6 +5,7 @@ on:
 
 jobs:
   poet:
+    name: Generate stanzas for Python resources
     runs-on: macos-11
     steps:
     - uses: actions/checkout@master
