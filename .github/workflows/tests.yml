@@ -3,13 +3,22 @@ on:
   push:
     branches:
       - main
+    paths:
+      - 'Formula/cmdict.rb'
   pull_request:
+    paths:
+      - 'Formula/cmdict.rb'
   workflow_dispatch:
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.event.pull_request.number || github.ref }}
+  cancel-in-progress: true
+
 jobs:
   test-bot:
     strategy:
       matrix:
-        os: [ubuntu-latest, macos-latest]
+        os: [ubuntu-22.04, macos-11]
     runs-on: ${{ matrix.os }}
     steps:
       - name: Set up Homebrew
