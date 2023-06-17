@@ -4,7 +4,7 @@ on:
   workflow_dispatch:
 
 jobs:
-  pre-commit:
+  poet:
     runs-on: macos-11
     steps:
     - uses: actions/checkout@master
@@ -16,4 +16,4 @@ jobs:
         pip install cmdict==0.1.4 homebrew-pypi-poet
     - name: Run homebrew-pypi-poet
       run: |
-        homebrew-pypi-poet cmdict
+        pythom -m poet cmdict
