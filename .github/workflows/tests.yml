@@ -5,9 +5,11 @@ on:
       - main
     paths:
       - 'Formula/cmdict.rb'
+      - '.github/workflows/tests.yml'
   pull_request:
     paths:
       - 'Formula/cmdict.rb'
+      - '.github/workflows/tests.yml'
   workflow_dispatch:
 
 concurrency:
@@ -18,7 +20,7 @@ jobs:
   test-bot:
     strategy:
       matrix:
-        os: [ubuntu-22.04, macos-11]
+        os: [ubuntu-20.04, ubuntu-22.04, macos-11, macos-12]
     runs-on: ${{ matrix.os }}
     steps:
       - name: Set up Homebrew
