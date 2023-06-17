@@ -1,15 +1,13 @@
-# brew install cmdict &middot; [![brew test-bot](https://github.com/pasty-dev/homebrew-cmdict/actions/workflows/tests.yml/badge.svg?branch=main)](https://github.com/pasty-dev/homebrew-cmdict/actions/workflows/tests.yml) [![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/pasty-dev/homebrew-cmdict/blob/main/LICENSE) [![pypi](https://badge.fury.io/py/cmdict.svg)](https://pypi.org/project/cmdict/)
+# brew install cmdict &middot; [![brew test-bot](https://github.com/pastydev/homebrew-cmdict/actions/workflows/tests.yml/badge.svg?branch=main)](https://github.com/pastydev/homebrew-cmdict/actions/workflows/tests.yml) [![pypi](https://badge.fury.io/py/cmdict.svg)](https://pypi.org/project/cmdict/) [![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/pastydev/homebrew-cmdict/blob/main/LICENSE)
 
-[`homebrew`](https://brew.sh/) [tap](https://docs.brew.sh/Taps) for [pasty-dev/cmdict](http://github.com/pasty-dev/cmdict), a command line dictionary toolset.
-
-## How to install `cmdict` via `homebrew`?
+[Homebrew](https://brew.sh/) [tap](https://docs.brew.sh/Taps) for [pastydev/cmdict](http://github.com/pastydev/cmdict), a command line dictionary toolset.
 
 ```console
-$ brew install pasty-dev/cmdict/cmdict
+$ brew install pastydev/cmdict/cmdict
 ```
 
-Or `brew tap pasty-dev/cmdict` and then `brew install cmdict`.
+Or `brew tap pastydev/cmdict` and then `brew install cmdict`.
 
-## Documentation
+## More about Homebrew
 
-`brew help`, `man brew` or check [Homebrew's documentation](https://docs.brew.sh).
+Run `brew help`, `man brew` or check [the documentation of Homebrew](https://docs.brew.sh).
