@@ -1,0 +1,19 @@
+name: poet
+
+on:
+  workflow_dispatch:
+
+jobs:
+  pre-commit:
+    runs-on: macos-11
+    steps:
+    - uses: actions/checkout@master
+    - uses: actions/setup-python@v2
+      with:
+        python-version: 3.11
+    - name: Install cmdict and homebrew-pypi-poet
+      run: |
+        pip install cmdict==0.1.4 homebrew-pypi-poet
+    - name: Run homebrew-pypi-poet
+      run: |
+        homebrew-pypi-poet cmdict
