@@ -11,10 +11,10 @@ jobs:
     - uses: actions/checkout@master
     - uses: actions/setup-python@v2
       with:
-        python-version: 3.11
+        python-version: "3.11"
     - name: Install cmdict and homebrew-pypi-poet
       run: |
-        pip install cmdict==0.1.4 homebrew-pypi-poet
+        pip install cmdict homebrew-pypi-poet
     - name: Run homebrew-pypi-poet
       run: |
         python -m poet cmdict
