@@ -26,7 +26,7 @@ permissions:
 
 jobs:
   tap_syntax:
-    if: github.repository_owner == 'Homebrew'
+    if: github.repository_owner == 'pastydev'
     runs-on: ubuntu-22.04
     container:
       image: ghcr.io/homebrew/ubuntu22.04:master
@@ -40,7 +40,7 @@ jobs:
       - run: brew test-bot --only-tap-syntax
 
   formulae_detect:
-    if: github.repository_owner == 'Homebrew' && github.event_name != 'push'
+    if: github.repository_owner == 'pastydev' && github.event_name != 'push'
     runs-on: ubuntu-22.04
     container:
       image: ghcr.io/homebrew/ubuntu22.04:master
@@ -67,7 +67,7 @@ jobs:
   setup_tests:
     permissions:
       pull-requests: read
-    if: github.repository_owner == 'Homebrew' && github.event_name == 'pull_request'
+    if: github.repository_owner == 'pastydev' && github.event_name == 'pull_request'
     runs-on: ubuntu-22.04
     needs: formulae_detect
     outputs:
@@ -230,7 +230,7 @@ jobs:
   setup_dep_tests:
     permissions:
       pull-requests: read
-    if: github.repository_owner == 'Homebrew' && github.event_name == 'pull_request'
+    if: github.repository_owner == 'pastydev' && github.event_name == 'pull_request'
     runs-on: ubuntu-22.04
     needs: [setup_tests, formulae_detect]
     outputs:
