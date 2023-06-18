@@ -7,6 +7,17 @@ class Cmdict < Formula
   sha256 "454c14a89ba492830a7273825ed8f3f5efc1a1235014c57fd0d5c4004c872aca"
   license "MIT"
 
+  bottle do
+    root_url "https://github.com/pastydev/homebrew-cmdict/releases/download/cmdict-0.1.5"
+    rebuild 1
+    sha256 cellar: :any_skip_relocation, ventura:  "85e44f965a4382b732f68f5277b64ba701434cbdabd6e79944417eab5f66d4a0"
+    sha256 cellar: :any_skip_relocation, monterey: "2aae25575d539e4cd7a0c7f1db24c015bc8226002636fb7cde1a3d09ac024517"
+    sha256 cellar: :any_skip_relocation, big_sur:  "e0a5061a8800d1f65b1baa52849f2937385b7d7f0fcac24a2f32d0b9e26cf63b"
+  end
+
+  # Required by "rapidfuzz" during its build.
+  depends_on "cmake" => :build
+
   # To enable the features for PDF, because it is optional by default.
   depends_on "pymupdf"
 
