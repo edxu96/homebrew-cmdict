@@ -16,7 +16,7 @@ class Cmdict < Formula
   end
 
   # Required by "rapidfuzz" during its build.
-  depends_on "cmake" => :build
+  depends_on "cmake"
 
   # To enable the features for PDF, because it is optional by default.
   depends_on "pymupdf"

@@ -16,7 +16,7 @@ class CmdictBasic < Formula
   end
 
   # Required by "rapidfuzz" during its build.
-  depends_on "cmake" => :build
+  depends_on "cmake"
 
   # Formulae for apps that require Python 3 should declare an
   # unconditional dependency on "python@3.x", based on
