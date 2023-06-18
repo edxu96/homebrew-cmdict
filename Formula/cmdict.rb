@@ -7,6 +7,9 @@ class Cmdict < Formula
   sha256 "454c14a89ba492830a7273825ed8f3f5efc1a1235014c57fd0d5c4004c872aca"
   license "MIT"
 
+  # Required by "rapidfuzz" during its build.
+  depends_on "cmake" => :build
+
   # To enable the features for PDF, because it is optional by default.
   depends_on "pymupdf"
 
