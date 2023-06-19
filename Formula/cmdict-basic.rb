@@ -15,8 +15,15 @@ class CmdictBasic < Formula
     sha256 cellar: :any_skip_relocation, big_sur:  "e0a5061a8800d1f65b1baa52849f2937385b7d7f0fcac24a2f32d0b9e26cf63b"
   end
 
+  conflicts_with "cmdict", because "two versions of the same application"
+
   # Required by "rapidfuzz" during its build.
-  depends_on "cmake"
+  on_macos do
+    depends_on "cmake" => :build
+  end
+  on_linux do
+    depends_on "cmake"
+  end
 
   # Formulae for apps that require Python 3 should declare an
   # unconditional dependency on "python@3.x", based on
