@@ -15,7 +15,7 @@ class Cmdict < Formula
     sha256 cellar: :any_skip_relocation, big_sur:  "e0a5061a8800d1f65b1baa52849f2937385b7d7f0fcac24a2f32d0b9e26cf63b"
   end
 
-  conflicts_with "cmdict-basic", because "two versions of the same application"
+  conflicts_with "cmdict-basic", because: "two versions of the same application"
 
   # Required by "rapidfuzz" during its build.
   on_macos do
