@@ -17,13 +17,8 @@ class CmdictBasic < Formula
 
   conflicts_with "cmdict", because: "two versions of the same application"
 
-  # Required by "rapidfuzz" during its build.
-  on_macos do
-    depends_on "cmake" => :build
-  end
-  on_linux do
-    depends_on "cmake"
-  end
+  # Required by "rapidfuzz".
+  depends_on "cmake"
 
   # Formulae for apps that require Python 3 should declare an
   # unconditional dependency on "python@3.x", based on

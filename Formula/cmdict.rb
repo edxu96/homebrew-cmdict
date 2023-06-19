@@ -17,13 +17,8 @@ class Cmdict < Formula
 
   conflicts_with "cmdict-basic", because: "two versions of the same application"
 
-  # Required by "rapidfuzz" during its build.
-  on_macos do
-    depends_on "cmake" => :build
-  end
-  on_linux do
-    depends_on "cmake"
-  end
+  # Required by "rapidfuzz".
+  depends_on "cmake"
 
   # To enable the features for PDF, because it is optional by default.
   depends_on "pymupdf"
