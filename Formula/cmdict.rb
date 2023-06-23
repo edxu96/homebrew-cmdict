@@ -17,9 +17,6 @@ class Cmdict < Formula
 
   conflicts_with "cmdict-basic", because: "two versions of the same application"
 
-  # Required by "rapidfuzz".
-  depends_on "cmake"
-
   # To enable the features for PDF, because it is optional by default.
   depends_on "pymupdf"
 
@@ -32,8 +29,16 @@ class Cmdict < Formula
   # "/lib/x86_64-linux-gnu/libyaml-0.so.2" in ubuntu 22.04.
   depends_on "pyyaml"
 
-  # Required by "cryptography" during its build on Linux.
+  on_macos do
+    # Required by "rapidfuzz".
+    depends_on "cmake" => :build
+  end
+
   on_linux do
+    # Required by "rapidfuzz".
+    depends_on "cmake"
+
+    # Required by "cryptography" during its build on Linux.
     depends_on "rust" => :build
   end
 
