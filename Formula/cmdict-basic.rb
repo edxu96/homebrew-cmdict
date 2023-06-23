@@ -30,11 +30,11 @@ class CmdictBasic < Formula
   end
 
   on_linux do
-    # Required by "rapidfuzz".
-    depends_on "cmake"
-
     # Required by "cryptography" during its build on Linux.
     depends_on "rust" => :build
+
+    # Required by "rapidfuzz".
+    depends_on "cmake"
   end
 
   conflicts_with "cmdict", because: "two versions of the same application"
