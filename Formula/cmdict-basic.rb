@@ -17,9 +17,6 @@ class CmdictBasic < Formula
 
   conflicts_with "cmdict", because: "two versions of the same application"
 
-  # Required by "rapidfuzz".
-  depends_on "cmake"
-
   # Formulae for apps that require Python 3 should declare an
   # unconditional dependency on "python@3.x", based on
   # https://docs.brew.sh/Python-for-Formula-Authors#python-declarations-for-applications.
@@ -29,8 +26,16 @@ class CmdictBasic < Formula
   # "/lib/x86_64-linux-gnu/libyaml-0.so.2" in ubuntu 22.04.
   depends_on "pyyaml"
 
-  # Required by "cryptography" during its build on Linux.
+  on_macos do
+    # Required by "rapidfuzz".
+    depends_on "cmake" => :build
+  end
+
   on_linux do
+    # Required by "rapidfuzz".
+    depends_on "cmake"
+
+    # Required by "cryptography" during its build on Linux.
     depends_on "rust" => :build
   end
 
