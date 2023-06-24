@@ -8,11 +8,12 @@ class CmdictBasic < Formula
   license "MIT"
 
   bottle do
-    root_url "https://github.com/pastydev/homebrew-cmdict/releases/download/cmdict-0.1.5"
-    rebuild 1
-    sha256 cellar: :any_skip_relocation, ventura:  "85e44f965a4382b732f68f5277b64ba701434cbdabd6e79944417eab5f66d4a0"
-    sha256 cellar: :any_skip_relocation, monterey: "2aae25575d539e4cd7a0c7f1db24c015bc8226002636fb7cde1a3d09ac024517"
-    sha256 cellar: :any_skip_relocation, big_sur:  "e0a5061a8800d1f65b1baa52849f2937385b7d7f0fcac24a2f32d0b9e26cf63b"
+    root_url "https://github.com/pastydev/homebrew-cmdict/releases/download/cmdict-basic-0.1.5"
+    rebuild 2
+    sha256 cellar: :any_skip_relocation, ventura:      "e197c36722f3de9f6b7061b793369543cf4815d7b8b569d73d76e7dc084652bc"
+    sha256 cellar: :any_skip_relocation, monterey:     "5b59b75ddc7bbffa86e4a938f67e604309135ee00bc3b9b1cf20b66876d51c17"
+    sha256 cellar: :any_skip_relocation, big_sur:      "b7f7ee39fe122d0a37207a6a00d9367530f1693e8773fb1967bbecf9d8e799dc"
+    sha256 cellar: :any_skip_relocation, x86_64_linux: "e0f952ab49933cf968cc5a80f1a19d4781c97f05e7d90684ddb4da0115cc1ff8"
   end
 
   # Formulae for apps that require Python 3 should declare an
