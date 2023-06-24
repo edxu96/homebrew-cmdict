@@ -9,10 +9,11 @@ class Cmdict < Formula
 
   bottle do
     root_url "https://github.com/pastydev/homebrew-cmdict/releases/download/cmdict-0.1.5"
-    rebuild 1
-    sha256 cellar: :any_skip_relocation, ventura:  "85e44f965a4382b732f68f5277b64ba701434cbdabd6e79944417eab5f66d4a0"
-    sha256 cellar: :any_skip_relocation, monterey: "2aae25575d539e4cd7a0c7f1db24c015bc8226002636fb7cde1a3d09ac024517"
-    sha256 cellar: :any_skip_relocation, big_sur:  "e0a5061a8800d1f65b1baa52849f2937385b7d7f0fcac24a2f32d0b9e26cf63b"
+    rebuild 2
+    sha256 cellar: :any_skip_relocation, ventura:      "87b28dead91111220b35c883de0f193f8e45b67087dc0daf6ef5b61d40c9827c"
+    sha256 cellar: :any_skip_relocation, monterey:     "fb948ae9a3866bad4828a4662ddd3f4abfad8b2d55ba218ff32b19a838dc5d61"
+    sha256 cellar: :any_skip_relocation, big_sur:      "d3b9961f80170944f228619534e1a0fbfa6b3e0dc0b209a34bafb132ae3735c4"
+    sha256 cellar: :any_skip_relocation, x86_64_linux: "a2c2eed39d1ed3ac34a73b3a03cb5150bf80af86649dd44bc43f76dbf5e7bb5b"
   end
 
   # To enable the features for PDF, because it is optional by default.
