@@ -1,11 +1,13 @@
-name: brew pr-pull
+name: publish
 on:
   pull_request_target:
     types:
       - labeled
 
 jobs:
-  pr-pull:
+  # Based on
+  # https://brew.sh/2020/11/18/homebrew-tap-with-bottles-uploaded-to-github-releases/.
+  publish:
     if: contains(github.event.pull_request.labels.*.name, 'pr-pull')
     runs-on: ubuntu-latest
     steps:
@@ -15,6 +17,7 @@ jobs:
       - name: Set up git
         uses: Homebrew/actions/git-user-config@master
 
+      # Download the bottles built by "tests"
       - name: Pull bottles
         env:
           HOMEBREW_GITHUB_API_TOKEN: ${{ github.token }}
@@ -23,6 +26,8 @@ jobs:
           PULL_REQUEST: ${{ github.event.pull_request.number }}
         run: brew pr-pull --debug --tap=$GITHUB_REPOSITORY $PULL_REQUEST
 
+      # Push commits to the default branch directly, without merging the
+      # pull request.
       - name: Push commits
         uses: Homebrew/actions/git-try-push@master
         with:

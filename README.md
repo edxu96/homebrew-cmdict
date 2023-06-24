@@ -26,7 +26,3 @@ Then you can install by running a simpler command:
 ```console
 $ brew install cmdict
 ```
-
-## More about Homebrew
-
-Run `brew help`, `man brew` or check [the documentation of Homebrew](https://docs.brew.sh).
