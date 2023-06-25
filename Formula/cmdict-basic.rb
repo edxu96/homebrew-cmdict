@@ -8,12 +8,12 @@ class CmdictBasic < Formula
   license "MIT"
 
   bottle do
-    root_url "https://github.com/pastydev/homebrew-cmdict/releases/download/cmdict-basic-0.1.5"
-    rebuild 2
-    sha256 cellar: :any_skip_relocation, ventura:      "e197c36722f3de9f6b7061b793369543cf4815d7b8b569d73d76e7dc084652bc"
-    sha256 cellar: :any_skip_relocation, monterey:     "5b59b75ddc7bbffa86e4a938f67e604309135ee00bc3b9b1cf20b66876d51c17"
-    sha256 cellar: :any_skip_relocation, big_sur:      "b7f7ee39fe122d0a37207a6a00d9367530f1693e8773fb1967bbecf9d8e799dc"
-    sha256 cellar: :any_skip_relocation, x86_64_linux: "e0f952ab49933cf968cc5a80f1a19d4781c97f05e7d90684ddb4da0115cc1ff8"
+    root_url "https://github.com/pastydev/homebrew-cmdict/releases/download/cmdict-basic-0.1.7"
+    sha256 cellar: :any_skip_relocation, arm64_ventura: "5674f1af229e6660965a32030d278e77674c30720fdefdd8fedfffb24d503331"
+    sha256 cellar: :any_skip_relocation, ventura:       "3d7473ec365e90e501cc68c0058fa648155f166d9de3469617c032166e7b392e"
+    sha256 cellar: :any_skip_relocation, monterey:      "8cdebc80b5a7cd1ef9880a83217f8efaf2dca3b6fc3aff1c9b74ac9f7738cc05"
+    sha256 cellar: :any_skip_relocation, big_sur:       "af3553e6491d90bb0283ee0768e98be3efc098b5510fe2114d0afc32cc5425b7"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "71c850b2f056df48785913fb1d2cd9638bd3941bb45eb29935a5d1f0d78124fa"
   end
 
   # Formulae for apps that require Python 3 should declare an
