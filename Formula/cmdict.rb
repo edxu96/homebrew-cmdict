@@ -3,8 +3,8 @@ class Cmdict < Formula
 
   desc "Command-line dictionary toolset"
   homepage "https://github.com/pastydev/cmdict"
-  url "https://files.pythonhosted.org/packages/d2/b7/68e0064a82e0a6d7998e4a8584b8e77976002094f6a16c4fbecfa76070d0/cmdict-0.1.5.tar.gz"
-  sha256 "454c14a89ba492830a7273825ed8f3f5efc1a1235014c57fd0d5c4004c872aca"
+  url "https://files.pythonhosted.org/packages/47/81/dce653f2ada989c3d2c068850b49128670874491e7e5f3e5f8877c0f332a/cmdict-0.1.7.tar.gz"
+  sha256 "1aa6f604c84ca8ae5bb1bcf8a64db9728be851cc4ea5e7cdfcc7c2ba3368045c"
   license "MIT"
 
   bottle do
