@@ -7,7 +7,8 @@ readme = "README.md"
 
 [tool.poetry.dependencies]
 python = "~3.11.1"
-cmdict = "0.1.9"
+cmdict = "~0.1.9"
+homebrew-pypi-poet = "~0.10.0"
 
 [build-system]
 requires = ["poetry-core"]
