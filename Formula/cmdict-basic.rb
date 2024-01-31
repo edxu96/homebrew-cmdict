@@ -83,6 +83,11 @@ class CmdictBasic < Formula
     sha256 "1871fb68a86b8fb3b59ca4cdd3dcccbc7e6d613eeed31f4c332531977b89beb5"
   end
 
+  resource "trogon" do
+    url "https://files.pythonhosted.org/packages/08/37/68b64c54aa5a2663f08630dfab1561f8c492d2d50b85310d62e43f289dda/trogon-0.5.0.tar.gz"
+    sha256 "61a57f0f1a38227d90601cd020f46960be8e36947b5e56c6932c2e01ecc5042a"
+  end
+
   resource "urllib3" do
     url "https://files.pythonhosted.org/packages/d6/af/3b4cfedd46b3addab52e84a71ab26518272c23c77116de3c61ead54af903/urllib3-2.0.3.tar.gz"
     sha256 "bee28b5e56addb8226c96f7f13ac28cb4c301dd5ea8a6ca179c0b9835e032825"
