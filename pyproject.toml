@@ -1,0 +1,14 @@
+[tool.poetry]
+name = "homebrew-cmdict"
+version = "0.1.0"
+description = "Python script to write resource stanzas of \"cmdict\" for building Homebrew bottles."
+authors = ["Edward Xu <edxu96@outlook.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "~3.11.1"
+cmdict = "0.1.9"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
