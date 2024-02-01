@@ -22,10 +22,10 @@ jobs:
           HOMEBREW_GITHUB_PACKAGES_USER: ${{ github.actor }}
           PULL_REQUEST: ${{ github.event.pull_request.number }}
         run: |
-          brew pr-pull --debug --tap=$GITHUB_REPOSITORY $PULL_REQUEST --artifact ubuntu-22.04-bottles
-          brew pr-pull --debug --tap=$GITHUB_REPOSITORY $PULL_REQUEST --artifact macos-11-bottles
-          brew pr-pull --debug --tap=$GITHUB_REPOSITORY $PULL_REQUEST --artifact macos-12-bottles
-          brew pr-pull --debug --tap=$GITHUB_REPOSITORY $PULL_REQUEST --artifact macos-13-bottles
+          brew pr-pull --debug --tap=$GITHUB_REPOSITORY $PULL_REQUEST --artifact ubuntu-22.04-bottles --no-upload --no-commit --no-cherry-pick
+          brew pr-pull --debug --tap=$GITHUB_REPOSITORY $PULL_REQUEST --artifact macos-11-bottles --no-upload --no-commit --no-cherry-pick
+          brew pr-pull --debug --tap=$GITHUB_REPOSITORY $PULL_REQUEST --artifact macos-12-bottles --no-upload --no-commit --no-cherry-pick
+          brew pr-pull --debug --tap=$GITHUB_REPOSITORY $PULL_REQUEST --artifact macos-13-bottles --no-upload --no-commit --no-cherry-pick
           brew pr-pull --debug --tap=$GITHUB_REPOSITORY $PULL_REQUEST --artifact macos-14-bottles
       # Push commits to the default branch directly, without merging the
       # pull request.
