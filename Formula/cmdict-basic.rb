@@ -8,7 +8,7 @@ class CmdictBasic < Formula
   license "MIT"
 
   bottle do
-    root_url "https://github.com/pastydev/homebrew-cmdict/releases/download/cmdict-basic-0.1.7"
+    root_url "https://github.com/pastydev/homebrew-cmdict/releases/download/cmdict-basic-0.1.9"
     sha256 cellar: :any_skip_relocation, arm64_sonoma: "8742d1d17c0ca306997f659026dd9aab3101c0e5512cf4a1c81ee97eee29fbf6"
     sha256 cellar: :any_skip_relocation, ventura:      "581e48c8889e8010004115ec23d6048b315c3a7512e11f47a7c8f8adf0e5a868"
     sha256 cellar: :any_skip_relocation, monterey:     "7fde0d2e442f234b704389cbb96a7b36e88d3f93372a3866d822ed736c2e5f52"
