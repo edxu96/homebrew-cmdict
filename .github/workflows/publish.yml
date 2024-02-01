@@ -9,7 +9,7 @@ jobs:
   # Based on
   # https://brew.sh/2020/11/18/homebrew-tap-with-bottles-uploaded-to-github-releases/.
   publish:
-    if: contains(github.event.pull_request.labels.*.name, 'CI/CD')
+    # if: contains(github.event.pull_request.labels.*.name, 'pr-pull')
     runs-on: ubuntu-latest
     steps:
       - name: Set up Homebrew
