@@ -1,14 +1,15 @@
 name: publish
 on:
-  pull_request_target:
-    types:
-      - labeled
+  # pull_request_target:
+  #   types:
+  #     - labeled
+  workflow_dispatch:
 
 jobs:
   # Based on
   # https://brew.sh/2020/11/18/homebrew-tap-with-bottles-uploaded-to-github-releases/.
   publish:
-    if: contains(github.event.pull_request.labels.*.name, 'pr-pull')
+    # if: contains(github.event.pull_request.labels.*.name, 'pr-pull')
     runs-on: ubuntu-latest
     steps:
       - name: Set up Homebrew
@@ -20,7 +21,7 @@ jobs:
           HOMEBREW_GITHUB_API_TOKEN: ${{ github.token }}
           HOMEBREW_GITHUB_PACKAGES_TOKEN: ${{ github.token }}
           HOMEBREW_GITHUB_PACKAGES_USER: ${{ github.actor }}
-          PULL_REQUEST: ${{ github.event.pull_request.number }}
+          PULL_REQUEST: 33
         run: |
           brew pr-pull --debug --tap=$GITHUB_REPOSITORY $PULL_REQUEST --artifact ubuntu-22.04-bottles
           brew pr-pull --debug --tap=$GITHUB_REPOSITORY $PULL_REQUEST --artifact macos-11-bottles
@@ -29,13 +30,13 @@ jobs:
           brew pr-pull --debug --tap=$GITHUB_REPOSITORY $PULL_REQUEST --artifact macos-14-bottles
       # Push commits to the default branch directly, without merging the
       # pull request.
-      - name: Push commits
-        uses: Homebrew/actions/git-try-push@master
-        with:
-          token: ${{ github.token }}
-          branch: main
-      - name: Delete branch
-        if: github.event.pull_request.head.repo.fork == false
-        env:
-          BRANCH: ${{ github.event.pull_request.head.ref }}
-        run: git push --delete origin $BRANCH
+      # - name: Push commits
+      #   uses: Homebrew/actions/git-try-push@master
+      #   with:
+      #     token: ${{ github.token }}
+      #     branch: main
+      # - name: Delete branch
+      #   if: github.event.pull_request.head.repo.fork == false
+      #   env:
+      #     BRANCH: ${{ github.event.pull_request.head.ref }}
+      #   run: git push --delete origin $BRANCH
